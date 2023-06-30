@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <title>做什么梦呢！</title>
+  <style>
+    button {
+      background-color: #6ce6dc;
+      color: white;
+      width: 400px;
+      height: 45px;
+      border: 0;
+      font-size: 16px;
+      box-sizing: content-box;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #44bdc8;
+    }
+  </style>
 </head>
+
 <body>
-    <p>若此症状持续发生，请致电：110</p>
+
+  <div style="margin: 0 auto; width: 50%; text-align: center">
+
+    <h2 style="font-size: 50px;">再见，猫雷Nyaru 😿😿</h2>
+    <button onclick="increment()">给Nyaru上香</button>
+    <p></p>
+    <button onclick="decrement()">偷吃贡品</button>
+    <p style="font-size:30px;">&nbsp;现有贡品：</p>
+    <p id="demo" style="font-size:50px;"></p>
+
+    <script>
+      function increment() {
+        var count = localStorage.getItem("count");
+        count++;
+        localStorage.setItem("count", count);
+        document.getElementById("demo").innerHTML = count;
+      }
+
+      function decrement() {
+        var count = localStorage.getItem("count");
+        count--;
+        localStorage.setItem("count", count);
+        document.getElementById("demo").innerHTML = count;
+      }
+
+
+      var count = localStorage.getItem("count");
+      if (count === null) {
+        count = 0;
+      }
+      document.getElementById("demo").innerHTML = count;
+    </script>
+
+  </div>
 </body>
+
 </html>
