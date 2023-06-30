@@ -1,2 +1,3 @@
 # NyaruWeb
-Nyarufoo网页，绝赞开发中！！
+再见，猫雷Nyaru 😿😿
+Nyaru.foo网页，绝赞开发中！！
